@@ -1,33 +1,36 @@
 import React from "react";
 import { Navbar, Nav, NavDropdown } from "react-bootstrap";
+import { LinkContainer } from "react-router-bootstrap";
 
 const Header = () => {
   return (
     <header>
-      <Navbar bg="dark" variant="dark">
-        <Navbar.Brand href="#home">React-Bootstrap</Navbar.Brand>
+      <Navbar collapseOnSelect expand="md" bg="dark" variant="dark">
+        <LinkContainer to="/">
+          <Navbar.Brand href="#home">Essentials Subscription</Navbar.Brand>
+        </LinkContainer>
         <Navbar.Toggle aria-controls="responsive-navbar-nav" />
         <Navbar.Collapse id="responsive-navbar-nav">
-          <Nav className="mr-auto">
-            <Nav.Link href="#features">Features</Nav.Link>
-            <Nav.Link href="#pricing">Pricing</Nav.Link>
-            <NavDropdown title="Dropdown" id="collasible-nav-dropdown">
-              <NavDropdown.Item href="#action/3.1">Action</NavDropdown.Item>
-              <NavDropdown.Item href="#action/3.2">
-                Another action
-              </NavDropdown.Item>
-              <NavDropdown.Item href="#action/3.3">Something</NavDropdown.Item>
+          <Nav className="ml-auto">
+            <LinkContainer to="/about">
+              <Nav.Link>About</Nav.Link>
+            </LinkContainer>
+            <LinkContainer to="/pricing">
+              <Nav.Link>Pricing</Nav.Link>
+            </LinkContainer>
+            <NavDropdown title="Account" id="collasible-nav-dropdown">
+              <LinkContainer to="/profile">
+                <NavDropdown.Item>Profile</NavDropdown.Item>
+              </LinkContainer>
+              <LinkContainer to="/profile/orders">
+                <NavDropdown.Item>Orders</NavDropdown.Item>
+              </LinkContainer>
+              <LinkContainer to="/profile/settings">
+                <NavDropdown.Item>Settings</NavDropdown.Item>
+              </LinkContainer>
               <NavDropdown.Divider />
-              <NavDropdown.Item href="#action/3.4">
-                Separated link
-              </NavDropdown.Item>
+              <NavDropdown.Item href="#action/3.4">Logout</NavDropdown.Item>
             </NavDropdown>
-          </Nav>
-          <Nav>
-            <Nav.Link href="#deets">More deets</Nav.Link>
-            <Nav.Link eventKey={2} href="#memes">
-              Dank memes
-            </Nav.Link>
           </Nav>
         </Navbar.Collapse>
       </Navbar>
