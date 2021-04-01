@@ -1,16 +1,22 @@
-import React from "react";
-import { Row, Col } from "react-bootstrap";
-import { data } from "../data";
+import React from 'react';
+import { Row, Col } from 'react-bootstrap';
+import { data } from '../data';
 
-import ProductBox from "../components/ProductBox";
+import ProductBox from '../components/ProductBox';
 
 const HomeScreen = () => {
   return (
     <>
       <h1>Current Boxes</h1>
-      <Row className="row">
+      <Row className='pt-1 row'>
         {data.boxes.map((item) => (
-          <Col sm={12} md={6} lg={4}>
+          <Col
+            key={item.name}
+            sm={12}
+            md={12}
+            lg={4}
+            className='d-flex justify-content-center'
+          >
             <ProductBox box={item} />
           </Col>
         ))}

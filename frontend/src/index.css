@@ -4,7 +4,7 @@
 
 .box {
   height: 300px;
-  max-width: 500px;
+  width: 500px;
   margin-bottom: 10px;
   background-color: lightsalmon;
   display: flex;
@@ -23,6 +23,15 @@
 }
 
 .col {
-  background-color: lightgoldenrodyellow;
+  /* background-color: lightgoldenrodyellow; */
   padding: 0;
+}
+
+.title {
+  margin-bottom: 10px;
+}
+
+.pImg {
+  height: 200px;
+  object-fit: contain;
 }
