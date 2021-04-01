@@ -1,22 +1,28 @@
-import React from 'react';
-import { Link } from 'react-router-dom';
-import { Card } from 'react-bootstrap';
+import React from "react";
+import { Link } from "react-router-dom";
+import { LinkContainer } from "react-router-bootstrap";
+import { Button, Card } from "react-bootstrap";
 
-const ProductBox = ({ box: { name, category, items, image } }) => {
+const ProductBox = ({
+  box: { name, category, products, image, description },
+}) => {
   return (
-    <Card className='my-3 p-3 rounded'>
-      <Link to='/product/3'>
+    <Card className="my-3 p-3 rounded">
+      <Link to="/product/3">
         <Card.Img
           src={`${process.env.PUBLIC_URL}/assets/${image}`}
-          className='pImg'
+          className="pImg"
         />
       </Link>
       <Card.Body>
         <Card.Title>
           <strong>{name}</strong>
         </Card.Title>
-        <Card.Subtitle>{category}</Card.Subtitle>
+        <Card.Subtitle>{description}</Card.Subtitle>
       </Card.Body>
+      <LinkContainer to={`/product/${name}`}>
+        <Button variant="salmon">Subscribe</Button>
+      </LinkContainer>
     </Card>
   );
 };

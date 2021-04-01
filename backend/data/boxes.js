@@ -1,0 +1,58 @@
+export const boxes = [
+  {
+    name: "Bathroom Box",
+    description: "A monthly box conatining all your bathroom essentials",
+    category: "cleaning",
+    products: [
+      "soap",
+      "toliet paper",
+      "toothpaste",
+      "floss",
+      "shampoo",
+      "body wash",
+    ],
+    image: "bathroom.jpg",
+  },
+  {
+    name: "Kitchen Box",
+    description: "Get kitchen staples delivered every month",
+    category: "food",
+    products: ["salt", "pepper", "napkins", "olive oil"],
+    image: "kitchen.jpg",
+  },
+  {
+    name: "Laundry Box",
+    description: "For all your laundry needs",
+    category: "cleaning",
+    products: ["detergent", "dryer sheets", "bleach", "softener"],
+    image: "laundry.jpg",
+  },
+  {
+    name: "Car Box",
+    description: "Keep your car running well and looking great",
+    category: "misc",
+    products: ["car wipes", "engine oil", "washer fluid"],
+    image: "car.jpg",
+  },
+  {
+    name: "Plant Box",
+    description: "Spruce up your space with these indoor gardening tools",
+    category: "household",
+    products: ["plant food", "soil", "seeds"],
+    image: "plant.jpg",
+  },
+  {
+    name: "Guitar Box",
+    description: "Never miss another practice session",
+    category: "hobby",
+    products: ["strings", "picks", "cleaning supplies"],
+    image: "guitar.jpg",
+  },
+  {
+    name: "Coffee Box",
+    description: "Wake up feeling refreshed every day",
+    category: "food",
+    products: ["beans", "filters", "tools"],
+    image: "coffee.jpg",
+  },
+];
