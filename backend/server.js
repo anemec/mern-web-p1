@@ -3,6 +3,8 @@ import dotenv from "dotenv";
 import connectDB from "./config/db.js";
 import morgan from "morgan";
 
+import boxRoutes from "./routes/boxRoutes.js";
+
 dotenv.config();
 
 connectDB();
@@ -15,12 +17,6 @@ if (process.env.NODE_ENV === "development") {
 
 app.use(express.json());
 
-app.get("/", (req, res) => {
-  res.send("hello");
-});
-
-app.get("/this", (req, res) => {
-  res.send("this");
-});
+app.use("/api/boxes", boxRoutes);
 
 app.listen(5000, console.log("Server running"));
