@@ -1,10 +1,11 @@
-import { createStore, combineReducers, applyMiddleware } from "redux";
-import thunk from "redux-thunk";
-import { composeWithDevTools } from "redux-devtools-extension";
-import { boxListReducer } from "./reducers/boxReducers";
+import { createStore, combineReducers, applyMiddleware } from 'redux';
+import thunk from 'redux-thunk';
+import { composeWithDevTools } from 'redux-devtools-extension';
+import { boxListReducer, boxDetailsReducer } from './reducers/boxReducers';
 
 const reducer = combineReducers({
   boxList: boxListReducer,
+  boxDetails: boxDetailsReducer,
 });
 
 const initialState = {
