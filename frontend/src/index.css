@@ -1,5 +1,5 @@
 .mc {
-  background-color: lightblue;
+  /* background-color: lightblue; */
 }
 
 .box {
@@ -19,7 +19,7 @@
 }
 
 .row {
-  background-color: lightgoldenrodyellow;
+  /* background-color: lightgoldenrodyellow; */
 }
 
 .col {
@@ -58,3 +58,7 @@
 .text-grey {
   color: grey;
 }
+
+/* .btn-primary {
+  background-color: blue;
+} */
